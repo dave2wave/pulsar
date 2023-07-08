@@ -118,8 +118,8 @@ public class SqliteJdbcSinkTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() throws Exception {
-        sqliteUtils.tearDown();
         jdbcSink.close();
+        sqliteUtils.tearDown();
     }
 
     private void testOpenAndWriteSinkNullValue(Map<String, String> actionProperties) throws Exception {
